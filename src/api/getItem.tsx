@@ -2,8 +2,9 @@ import axios from "axios";
 
 
 export const GetApiItem = ():Object => {
-    let items:Object = {};
-    const url = 'http://localhost:8888/items';
+    let items:Object = {};    
+    const url = 'http://localhost:8888/';
+    console.log('ssss');
     axios.get(url).then((responce) => {
         items = responce.data
         console.log(items);
