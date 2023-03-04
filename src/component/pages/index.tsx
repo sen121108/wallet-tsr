@@ -1,11 +1,17 @@
 import { GetApiItem } from "../../api/getItem"
 
 export const Index: React.FC = () => {
-    const items:Object = GetApiItem()
-
+    const items:any = GetApiItem()
+    console.log(items[0])
     return (
         <div>
-            <p>index</p>
+              <ul>
+                {Object.keys(items).map(key => (
+                  <li key={key}>
+                    {items[key].name}
+                  </li>
+                ))}
+              </ul>
         </div>
     )
     
